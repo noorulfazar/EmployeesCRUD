@@ -1,5 +1,5 @@
 package com.api.employee.controller;
-
+ 
 import com.api.employee.dto.EmployeeDTO;
 import com.api.employee.dto.SalaryStatsDTO;
 import com.api.employee.entity.Employee;
@@ -7,6 +7,7 @@ import com.api.employee.exceptions.ErrorObject;
 import com.api.employee.exceptions.ResourceNotFoundException;
 import com.api.employee.exceptions.ResponseObject;
 import com.api.employee.service.EmployeeService;
+import com.api.employee.utility.EmployeeHandler;
 import com.api.employee.utility.EmployeeMapper;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,9 +24,15 @@ public class EmployeeController {
 
     @Autowired
     private EmployeeService service;
+    
+    @Autowired
+    private EmployeeHandler handler;
 
     @PostMapping
     public EmployeeDTO add(@RequestBody EmployeeDTO dto) {
+    	
+    	// calling method to test the cases
+    	handler.method();
         return service.save(dto);
     }
 
