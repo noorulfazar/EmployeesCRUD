@@ -12,7 +12,7 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
  
-@ExtendWith(MockitoExtension.class)
+@ExtendWith(Moc kitoExtension.class)
 public class EmployeeControllerTest {
 
     @InjectMocks
